@@ -9,15 +9,17 @@ public abstract class Container {
         this.weight = weight;
     }
 
-    double consumption() {
-        return 0;  // TODO should return fuel consumption required by the container
+    double consumption(Container container) {
+        return 0;
     }
 
 
     boolean equals(Container other) {
          // TODO  check type, ID and weight of a container.
                         // If they are the same, return true, otherwise return false.
-        if(this.getID() == other.getID() && this.getWeight() == other.getWeight() && this.getClass().equals(other.getClass())==true){
+        if(this.getID() == other.getID() &&
+                this.getWeight() == other.getWeight() &&
+                this.getClass().equals(other.getClass())){
             return true;
         }
         else
