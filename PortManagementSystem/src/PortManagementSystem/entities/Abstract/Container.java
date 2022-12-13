@@ -9,7 +9,7 @@ public abstract class Container {
         this.weight = weight;
     }
 
-    double consumption(Container container) {
+    double consumption() {
         return 0;
     }
 
