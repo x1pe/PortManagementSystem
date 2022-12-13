@@ -31,7 +31,7 @@ public class ContainerFactory implements IContainerService {
 
         }
     }
-    public void BuildBox(int PortID, int weight) throws InvalidTypeException {
+    public void ContainerBuilder(int PortID, int weight) throws InvalidTypeException {
         if(weight<=3000)
         {
             new BasicContainer(PortID,weight);
