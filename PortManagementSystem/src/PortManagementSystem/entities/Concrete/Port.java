@@ -40,6 +40,7 @@ public class Port implements IPort {
     double getDistance(Port other)
     {
         // TODO calculates the distance between the object itself and another Port
-        return 0;
+        double getRootsquare = (this.X - other.X)*(this.X - other.X) + (this.Y - other.Y) * (this.Y - other.Y);
+        return Math.pow(getRootsquare, 1/2);
     }
 }
