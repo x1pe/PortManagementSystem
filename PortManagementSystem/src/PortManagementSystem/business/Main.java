@@ -1,7 +1,7 @@
 package PortManagementSystem.business;
 
 public class Main {
-    public static void main(string args) {
+    public static void main(String args) {
         System.out.println("menu:");
         System.out.println("1-) Create a container.");
         System.out.println("2-) Create a ship.");
