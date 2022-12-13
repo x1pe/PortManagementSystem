@@ -9,16 +9,40 @@ import java.util.List;
 public class Ship implements IShip {
 
 
-    public Ship(int ID, Port p, int totalWeightCapacity,
-                int
-            maxNumberOfAllContainers,
+    int ID;
+
+    double fuel;
+
+    Port currentPort;
+    int portID;
+
+    String shipName;
+    int totalWeightCapacity;
+    int maxNumberOfAllContainers;
+    int maxNumberOfHeavyContainers;
+    int maxNumberOfRefrigeratedContainers;
+    double fuelConsumptionPerKM;
+
+    ArrayList<Container> CurrentContainers;
+
+
+
+    public Ship(String shipName,
+                int portID,
+                Port p,
+                int totalWeightCapacity,
+                int maxNumberOfAllContainers,
                 int maxNumberOfHeavyContainers,
                 int maxNumberOfRefrigeratedContainers,
-                int maxNumberOfLiquidContainers,
-                double fuelConsumptionPerKM)
-
-    {
-
+                double fuelConsumptionPerKM) {
+        this.shipName = shipName;
+        this.portID = portID;
+        this.currentPort = p;
+        this.totalWeightCapacity = totalWeightCapacity;
+        this.maxNumberOfAllContainers = maxNumberOfAllContainers;
+        this.maxNumberOfHeavyContainers = maxNumberOfHeavyContainers;
+        this.maxNumberOfRefrigeratedContainers = maxNumberOfRefrigeratedContainers;
+        this.fuelConsumptionPerKM = fuelConsumptionPerKM;
     }
 
     ArrayList<Container> getCurrentContainers()
