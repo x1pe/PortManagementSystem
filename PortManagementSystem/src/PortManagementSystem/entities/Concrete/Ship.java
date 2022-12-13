@@ -24,6 +24,7 @@ public class Ship implements IShip {
     ArrayList<Container> getCurrentContainers()
     {
         // TODO
+        return null;
     }
 
     @Override
