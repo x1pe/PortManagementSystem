@@ -1,7 +1,7 @@
 package PortManagementSystem.entities.Abstract;
 
-import containers.Container;
-import ports.Port;
+import PortManagementSystem.entities.Concrete.Port;
+
 
 public interface IShip {
 	/*

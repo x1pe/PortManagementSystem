@@ -1,6 +1,7 @@
 package PortManagementSystem.entities.Abstract;
 
-import ships.Ship;
+import PortManagementSystem.entities.Concrete.Ship;
+
 
 public interface IPort {
 	/*

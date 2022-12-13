@@ -1,4 +1,5 @@
 package PortManagementSystem.entities.Abstract;
 
-public class Container {
+public abstract class Container {
+    
 }
