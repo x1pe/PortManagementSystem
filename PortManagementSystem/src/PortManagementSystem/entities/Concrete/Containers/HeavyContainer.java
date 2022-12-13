@@ -1,4 +1,9 @@
 package PortManagementSystem.entities.Concrete.Containers;
 
-public class HeavyContainer {
+import PortManagementSystem.entities.Abstract.Container;
+
+public class HeavyContainer extends Container {
+    public HeavyContainer(int ID, int weight) {
+        super(ID, weight);
+    }
 }
