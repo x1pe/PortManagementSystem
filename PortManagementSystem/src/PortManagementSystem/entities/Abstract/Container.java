@@ -15,8 +15,13 @@ public abstract class Container {
 
 
     boolean equals(Container other) {
-        return false;  // TODO  check type, ID and weight of a container.
+         // TODO  check type, ID and weight of a container.
                         // If they are the same, return true, otherwise return false.
+        if(this.getID() == other.getID() && this.getWeight() == other.getWeight() && this.getClass().equals(other.getClass())==true){
+            return true;
+        }
+        else
+            return false;
     }
 
 
