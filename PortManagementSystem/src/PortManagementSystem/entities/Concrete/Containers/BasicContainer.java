@@ -7,7 +7,7 @@ public class BasicContainer extends Container {
         super(ID, weight);
     }
 
-    public double consumption()
+    private double consumption()
     {
         return 2.50 * this.getWeight();
     }

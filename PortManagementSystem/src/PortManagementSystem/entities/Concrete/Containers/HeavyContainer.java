@@ -7,7 +7,7 @@ public class HeavyContainer extends Container {
         super(ID, weight);
     }
 
-    public double consumption()
+    private double consumption()
     {
         return 3.00 * this.getWeight();
     }

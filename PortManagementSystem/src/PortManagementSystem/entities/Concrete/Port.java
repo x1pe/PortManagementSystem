@@ -8,6 +8,8 @@ import java.util.ArrayList;
 
 public class Port implements IPort {
 
+
+
     private int ID;
     private double X;
     private double Y;
@@ -17,6 +19,13 @@ public class Port implements IPort {
     ArrayList<Ship> history;
 
     ArrayList<Ship> current;
+
+
+    public Port(String PortName,double x, double y) {
+        this.X = x;
+        this.Y = y;
+        ID=0; //TODO Auto incremented id
+    }
 
     @Override
     public void incomingShip(Ship s) {

@@ -1,5 +1,8 @@
 package PortManagementSystem.entities.Abstract;
 
+import PortManagementSystem.entities.Concrete.Containers.BasicContainer;
+import PortManagementSystem.entities.Concrete.Containers.RefrigeratedContainer;
+
 public abstract class Container {
 
     private int ID;
@@ -9,7 +12,9 @@ public abstract class Container {
         this.weight = weight;
     }
 
-    double consumption() {
+
+
+    private double consumption() {
         return 0;
     }
 
@@ -31,17 +36,13 @@ public abstract class Container {
         return ID;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
-    }
+
 
     public int getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
+
 
 
 }
