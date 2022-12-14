@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class Port implements IPort {
 
 
+    private final String portName;
 
     private int ID;
     private double X;
@@ -21,10 +22,11 @@ public class Port implements IPort {
     ArrayList<Ship> current;
 
 
-    public Port(String PortName,double x, double y) {
+    public Port(String portName,double x, double y) {
+        this.portName = portName;
         this.X = x;
         this.Y = y;
-        ID=0; //TODO Auto incremented id
+         //TODO Auto incremented id
     }
 
     @Override

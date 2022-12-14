@@ -4,7 +4,7 @@ import PortManagementSystem.entities.Abstract.Container;
 import PortManagementSystem.entities.Abstract.IShip;
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class Ship implements IShip {
 
@@ -16,12 +16,13 @@ public class Ship implements IShip {
     Port currentPort;
     int portID;
 
-    String shipName;
-    int totalWeightCapacity;
-    int maxNumberOfAllContainers;
-    int maxNumberOfHeavyContainers;
-    int maxNumberOfRefrigeratedContainers;
-    double fuelConsumptionPerKM;
+    private final String shipName;
+    private final int totalWeightCapacity;
+    private final int maxNumberOfAllContainers;
+    private final int maxNumberOfHeavyContainers;
+    private final int maxNumberOfRefrigeratedContainers;
+    private final int maxNumberOfLiquidContainers;
+    private double fuelConsumptionPerKM;
 
     ArrayList<Container> CurrentContainers;
 
@@ -34,6 +35,7 @@ public class Ship implements IShip {
                 int maxNumberOfAllContainers,
                 int maxNumberOfHeavyContainers,
                 int maxNumberOfRefrigeratedContainers,
+                int maxNumberOfLiquidContainers,
                 double fuelConsumptionPerKM) {
         this.shipName = shipName;
         this.portID = portID;
@@ -42,6 +44,7 @@ public class Ship implements IShip {
         this.maxNumberOfAllContainers = maxNumberOfAllContainers;
         this.maxNumberOfHeavyContainers = maxNumberOfHeavyContainers;
         this.maxNumberOfRefrigeratedContainers = maxNumberOfRefrigeratedContainers;
+        this.maxNumberOfLiquidContainers = maxNumberOfLiquidContainers;
         this.fuelConsumptionPerKM = fuelConsumptionPerKM;
     }
 
@@ -69,5 +72,33 @@ public class Ship implements IShip {
     @Override
     public boolean unLoad(Container cont) {
         return false;
+    }
+
+    public int getMaxNumberOfAllContainers() {
+        return maxNumberOfAllContainers;
+    }
+
+    public int getMaxNumberOfHeavyContainers() {
+        return maxNumberOfHeavyContainers;
+    }
+
+    public int getMaxNumberOfRefrigeratedContainers() {
+        return maxNumberOfRefrigeratedContainers;
+    }
+
+    public int getMaxNumberOfLiquidContainers() {
+        return maxNumberOfLiquidContainers;
+    }
+
+    public int getTotalWeightCapacity() {
+        return totalWeightCapacity;
+    }
+
+    public String getShipName() {
+        return shipName;
+    }
+
+    public double getFuelConsumptionPerKM() {
+        return fuelConsumptionPerKM;
     }
 }
