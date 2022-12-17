@@ -1,11 +1,13 @@
 package PortManagementSystem.entities.Concrete.Containers;
 
 public class LiquidContainer extends HeavyContainer {
-    public LiquidContainer(int ID, int weight) {
-        super(ID, weight);
+    public LiquidContainer(int ID,int PortID, int weight) {
+        super(ID,PortID, weight);
     }
-    private double consumption()
+    public double consumption()
     {
         return 4.00 * this.getWeight();
     }
+
+
 }

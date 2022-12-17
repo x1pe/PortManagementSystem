@@ -1,5 +1,6 @@
 package PortManagementSystem.entities.Concrete;
 
+import PortManagementSystem.Core.primaryKeyAssigners.PortKeyAssigner;
 import PortManagementSystem.entities.Abstract.Container;
 import PortManagementSystem.entities.Abstract.IPort;
 
@@ -22,21 +23,22 @@ public class Port implements IPort {
     ArrayList<Ship> current;
 
 
-    public Port(String portName,double x, double y) {
+    public Port(int ID,String portName,double x, double y) {
         this.portName = portName;
         this.X = x;
         this.Y = y;
-         //TODO Auto incremented id
+        this.ID = ID;
+
     }
 
     @Override
     public void incomingShip(Ship s) {
-
+        current.add(s);
     }
 
     @Override
     public void outgoingShip(Ship s) {
-
+        history.add(s);
     }
 
     double getDistance(Port other)

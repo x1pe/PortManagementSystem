@@ -1,11 +1,15 @@
 package PortManagementSystem.business.Concrete;
 
+import PortManagementSystem.Core.primaryKeyAssigners.ShipKeyAssigner;
 import PortManagementSystem.business.Abstract.IShipService;
 import PortManagementSystem.entities.Concrete.Port;
 import PortManagementSystem.entities.Concrete.Ship;
 
+import java.util.HashMap;
+
 public class ShipFactory implements IShipService {
 
+    public static HashMap<int, Ship> ShipMap = new HashMap<int, Ship>();
     private static boolean Build = true;
 
     public static boolean isBuild() {
@@ -50,8 +54,10 @@ public class ShipFactory implements IShipService {
 
         if(isBuild())
         {
-            new Ship(shipName,PortID,p,totalWeightCapacity,maxNumberOfAllContainers,maxNumberOfHeavyContainers,
-                    maxNumberOfRefrigeratedContainers,maxNumberOfLiquidContainers,fuelConsumptionPerKM);
+            int key = ShipKeyAssigner.assign();
+            ShipMap.put(key,new Ship(key,shipName,PortID,p,totalWeightCapacity,maxNumberOfAllContainers,maxNumberOfHeavyContainers,
+                    maxNumberOfRefrigeratedContainers,maxNumberOfLiquidContainers,fuelConsumptionPerKM));
+
         }
 
     }

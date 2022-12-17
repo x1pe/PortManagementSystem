@@ -9,5 +9,8 @@ public class Main {
         System.out.println("5-) Unload a container from a ship.");
         System.out.println("6-) Send ship to another port.");
         System.out.println("7-) Refuel ship.");
+
+
+        System.out.println("");
     }
 }

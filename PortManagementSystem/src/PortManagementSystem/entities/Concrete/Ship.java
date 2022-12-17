@@ -1,5 +1,6 @@
 package PortManagementSystem.entities.Concrete;
 
+import PortManagementSystem.Core.primaryKeyAssigners.ShipKeyAssigner;
 import PortManagementSystem.entities.Abstract.Container;
 import PortManagementSystem.entities.Abstract.IShip;
 
@@ -9,12 +10,12 @@ import java.util.ArrayList;
 public class Ship implements IShip {
 
 
-    int ID;
+    private final int ID;
 
-    double fuel;
+    private double fuel;
 
-    Port currentPort;
-    int portID;
+    private Port currentPort;
+    private  int portID;
 
     private final String shipName;
     private final int totalWeightCapacity;
@@ -28,7 +29,8 @@ public class Ship implements IShip {
 
 
 
-    public Ship(String shipName,
+    public Ship(int ID,
+                String shipName,
                 int portID,
                 Port p,
                 int totalWeightCapacity,
@@ -36,7 +38,9 @@ public class Ship implements IShip {
                 int maxNumberOfHeavyContainers,
                 int maxNumberOfRefrigeratedContainers,
                 int maxNumberOfLiquidContainers,
-                double fuelConsumptionPerKM) {
+                double fuelConsumptionPerKM)
+    {
+        this.ID = ID;
         this.shipName = shipName;
         this.portID = portID;
         this.currentPort = p;
@@ -48,17 +52,13 @@ public class Ship implements IShip {
         this.fuelConsumptionPerKM = fuelConsumptionPerKM;
     }
 
-    ArrayList<Container> getCurrentContainers()
-    {
-        // TODO
-        return null;
-    }
+
 
     @Override
     public boolean sailTo(Port p) {
         return false;
     }
-
+        //TODO
     @Override
     public void reFuel(double newFuel) {
 
@@ -68,10 +68,16 @@ public class Ship implements IShip {
     public boolean load(Container cont) {
         return false;
     }
-
+        //TODO
     @Override
     public boolean unLoad(Container cont) {
         return false;
+    }
+        //TODO
+
+
+    public ArrayList<Container> getCurrentContainers() {
+        return CurrentContainers;
     }
 
     public int getMaxNumberOfAllContainers() {

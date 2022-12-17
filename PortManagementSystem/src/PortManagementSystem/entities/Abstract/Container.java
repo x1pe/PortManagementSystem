@@ -1,15 +1,19 @@
 package PortManagementSystem.entities.Abstract;
 
+import PortManagementSystem.Core.primaryKeyAssigners.ContainerKeyAssigner;
 import PortManagementSystem.entities.Concrete.Containers.BasicContainer;
 import PortManagementSystem.entities.Concrete.Containers.RefrigeratedContainer;
 
 public abstract class Container {
 
-    private int ID;
+    private final int ID;
     private int weight;
-    public Container(int ID, int weight) {
+
+    private int portID;
+    public Container(int ID,int portID,int weight) {
         this.ID = ID;
         this.weight = weight;
+        this.portID = portID;
     }
 
 
@@ -17,6 +21,8 @@ public abstract class Container {
     private double consumption() {
         return 0;
     }
+
+
 
 
     boolean equals(Container other) {
