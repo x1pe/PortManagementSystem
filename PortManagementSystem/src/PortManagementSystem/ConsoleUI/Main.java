@@ -52,6 +52,7 @@ public class Main {
             System.out.println("");
             System.out.println("*********************************************");
             System.out.println("*****************Create Port*****************");
+            System.out.println("*********************************************");
             System.out.println("");
             System.out.println("YOU need to Give X/Y Location to create new port:");
             System.out.println("");
@@ -66,6 +67,7 @@ public class Main {
             System.out.println("");
             System.out.println("*********************************************");
             System.out.println("**************Load A Container***************");
+            System.out.println("*********************************************");
             System.out.println("");
 
         }
@@ -77,6 +79,8 @@ public class Main {
             System.out.println("");
             System.out.println("*********************************************");
             System.out.println("**************Unload A Container*************");
+            System.out.println("*********************************************");
+
 
 
         }
@@ -87,6 +91,10 @@ public class Main {
             System.out.println("");
             System.out.println("");
             System.out.println("*********************************************");
+            System.out.println("************Sailing to Another Port**********");
+            System.out.println("*********************************************");
+
+
         }
         else if (menuvar==7)
         {
@@ -95,6 +103,10 @@ public class Main {
             System.out.println("");
             System.out.println("");
             System.out.println("*********************************************");
+            System.out.println("*******************Refueling*****************");
+            System.out.println("*********************************************");
+
+
         }
         else
         {
@@ -117,14 +129,24 @@ public class Main {
 
     public static void printMenu()
     {
+        System.out.println("************************************************************************");
+        System.out.println("");
         System.out.println("*********************************************");
         System.out.println("1-) Create a container.");
+        System.out.println("*********************************************");
         System.out.println("2-) Create a ship.");
+        System.out.println("*********************************************");
         System.out.println("3-) Create a port.");
+        System.out.println("*********************************************");
         System.out.println("4-) Load a container to a ship.");
+        System.out.println("*********************************************");
         System.out.println("5-) Unload a container from a ship.");
+        System.out.println("*********************************************");
         System.out.println("6-) Send ship to another port.");
+        System.out.println("*********************************************");
         System.out.println("7-) Refuel ship.");
         System.out.println("*********************************************");
+        System.out.println("");
+        System.out.println("************************************************************************");
     }
 }
