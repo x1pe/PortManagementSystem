@@ -2,6 +2,8 @@ package PortManagementSystem.ConsoleUI;
 
 import java.util.Scanner;
 
+import static PortManagementSystem.business.Concrete.PortFactory.PortMap;
+
 public class Main {
     public static void main(String args) {
 
@@ -24,6 +26,10 @@ public class Main {
             System.out.println("");
             System.out.println("YOU need to Select A Port To Create Container:");
             System.out.println("    Your Available Ports:");
+            System.out.println("PortID  // Coordinates (X/Y) // PortName");
+            PortMap.entrySet().forEach(entry->{
+                System.out.println(entry.getKey() + "=========>" + entry.getValue().getCoordinates() + entry.getValue().getPortName());
+            });
             System.out.println("");
 
             //TODO SHOW ALL PORTS AND COORDINATES, AVAILABLE INFO
@@ -41,6 +47,7 @@ public class Main {
             System.out.println("");
             System.out.println("    Your Available Ports:");
             System.out.println("");
+
 
 
         }
@@ -108,6 +115,12 @@ public class Main {
 
 
         }
+
+        else if (menuvar==8)
+        {
+
+        }
+
         else
         {
             System.out.println("");

@@ -47,4 +47,23 @@ public class Port implements IPort {
         double getRootsquare = (this.X - other.X)*(this.X - other.X) + (this.Y - other.Y) * (this.Y - other.Y);
         return Math.pow(getRootsquare, 1/2);
     }
+
+    public double getX() {
+        return X;
+    }
+
+    public double getY() {
+        return Y;
+    }
+
+    public  String getCoordinates() {
+        String c1=Double.toString(X);
+        String c2=Double.toString(Y);
+
+        return c1 + "/" + c2;
+    }
+
+    public String getPortName() {
+        return portName;
+    }
 }
