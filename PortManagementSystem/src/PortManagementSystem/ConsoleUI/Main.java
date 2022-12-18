@@ -20,8 +20,12 @@ public class Main {
             System.out.println("");
             System.out.println("");
             System.out.println("*********************************************");
+            System.out.println("************Create Container*****************");
+            System.out.println("");
             System.out.println("YOU need to Select A Port To Create Container:");
             System.out.println("    Your Available Ports:");
+            System.out.println("");
+
             //TODO SHOW ALL PORTS AND COORDINATES, AVAILABLE INFO
         }
         else if (menuvar==2)
@@ -31,8 +35,13 @@ public class Main {
             System.out.println("");
             System.out.println("");
             System.out.println("*********************************************");
+            System.out.println("*****************Create Ship*****************");
+            System.out.println("");
             System.out.println("YOU need to Select A Port To Create Ship:");
+            System.out.println("");
             System.out.println("    Your Available Ports:");
+            System.out.println("");
+
 
         }
         else if (menuvar==3)
@@ -42,6 +51,12 @@ public class Main {
             System.out.println("");
             System.out.println("");
             System.out.println("*********************************************");
+            System.out.println("*****************Create Port*****************");
+            System.out.println("");
+            System.out.println("YOU need to Give X/Y Location to create new port:");
+            System.out.println("");
+            System.out.println("Type X");
+            System.out.println("Type Y");
         }
         else if (menuvar==4)
         {
@@ -50,6 +65,9 @@ public class Main {
             System.out.println("");
             System.out.println("");
             System.out.println("*********************************************");
+            System.out.println("**************Load A Container***************");
+            System.out.println("");
+
         }
         else if (menuvar==5)
         {
@@ -58,6 +76,9 @@ public class Main {
             System.out.println("");
             System.out.println("");
             System.out.println("*********************************************");
+            System.out.println("**************Unload A Container*************");
+
+
         }
         else if (menuvar==6)
         {
