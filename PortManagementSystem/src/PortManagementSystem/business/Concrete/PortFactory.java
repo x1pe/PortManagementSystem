@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 public class PortFactory implements IPortService {
 
-    public static HashMap<int, Port> PortMap = new HashMap<int, Port>();
+    public static HashMap<Integer, Port> PortMap = new HashMap<Integer, Port>();
     private static boolean Build = true;
 
     public static boolean isBuild() {

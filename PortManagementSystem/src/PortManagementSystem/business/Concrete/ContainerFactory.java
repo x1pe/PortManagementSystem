@@ -13,11 +13,11 @@ import java.util.HashMap;
 
 public class ContainerFactory implements IContainerService {
 
-    public static HashMap<int, Container> ContainerMap = new HashMap<int, Container>();
+    public static HashMap<Integer, Container> ContainerMap = new HashMap<Integer, Container>();
 
 
 
-    public void ContainerBuilder(int PortID, int weight, char type) throws InvalidTypeException {
+    public static void ContainerBuilder(int PortID, int weight, char type) throws InvalidTypeException {
         if(weight<=3000)
         {
             System.out.println("You can't choose R/L type for Basic Containers");
@@ -44,7 +44,7 @@ public class ContainerFactory implements IContainerService {
 
         }
     }
-    public void ContainerBuilder(int PortID, int weight) throws InvalidTypeException {
+    public static void ContainerBuilder(int PortID, int weight) throws InvalidTypeException {
         if(weight<=3000)
         {
             int key = ContainerKeyAssigner.assign();

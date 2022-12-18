@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 public class ShipFactory implements IShipService {
 
-    public static HashMap<int, Ship> ShipMap = new HashMap<int, Ship>();
+    public static HashMap<Integer, Ship> ShipMap = new HashMap<Integer, Ship>();
     private static boolean Build = true;
 
     public static boolean isBuild() {
